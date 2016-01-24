@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="payment_acquirer_oninvoice" model="payment.acquirer">
+            <field name="name">Payment on Invoice</field>
+            <field name="image" type="base64" file="payment_oninvoice/static/description/icon.png"/>
+            <field name="provider">oninvoice</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="oninvoice_acquirer_button"/>
+            <field name="auto_confirm">none</field>
+            <field name="environment">test</field>
+            <field name="website_published" eval="False"/>
+            <field name="pending_msg"><![CDATA[
+<i>Pending,</i> Your online order has been successfully recorded. We will validate it at the earliest opportunity.]]>
+            </field>
+            <field name="pre_msg"><![CDATA[
+<p>With this payment option, you will pay upon receipt an invoice.</p>]]>
+            </field>
+        </record>
+
+    </data>
+</openerp>

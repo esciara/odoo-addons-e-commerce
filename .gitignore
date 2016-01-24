@@ -1,0 +1,15 @@
+# OS-specific
+.DS_Store
+
+# Python
+*.py[co]
+
+# IDE junk
+.idea/*
+*.iml
+.project
+
+# odoo runbot work files
+runbot/static/build
+runbot/static/repo
+runbot/static/nginx
